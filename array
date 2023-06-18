@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: Unliscened
+
+pragma solidity>=0.7.0;
+
+contract arrayy{
+    uint[] public num=[1,2,3,4];
+
+//for returning array
+   /* function getarr() public view returns (uint[] memory){
+    return num;
+    }
+
+}*/
+
+//for returning an array element
+function getarr() public returns (uint){
+    num[1]=99;
+    return num[1];
+    }
+}
