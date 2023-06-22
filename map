@@ -1,0 +1,11 @@
+// SPDX-License-Identifier: Unliscened
+
+pragma solidity>=0.7.0;
+
+contract map{
+    mapping (address=>uint) public balances;
+
+    function setbl (uint bal) public{
+        balances[msg.sender]=bal;
+    }
+}
