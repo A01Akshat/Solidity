@@ -1,0 +1,12 @@
+// SPDX-License-Identifier: Unliscened
+
+pragma solidity>=0.7.0;
+
+contract events{
+    event transfer(address from,address to,uint amt);
+
+    function tr(address _to,uint a)public{
+        emit transfer(msg.sender,_to, a);
+    }
+
+}
