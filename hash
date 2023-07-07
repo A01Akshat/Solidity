@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: Unliscened
+
+pragma solidity>=0.7.0;
+
+contract hash{
+    bytes32 public pass;
+
+    function genpass(string memory _pass)public{
+        pass=keccak256(abi.encodePacked(_pass));
+    }
+
+    function sendmoney(string memory _pass)public view{
+        require(keccak256(abi.encodePacked(_pass))==pass,"WRONG PASSWORD");
+    }
+}
